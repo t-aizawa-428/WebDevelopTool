@@ -47,7 +47,6 @@ function getPassword() {
     radioList.forEach(radio => {
         if(radio.checked) {
             len = radio.value;
-            console.log(radio.value);
         };
     });
 
