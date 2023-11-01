@@ -77,7 +77,7 @@ function errorCheck(height, weight) {
 
     //空文字判定
     if(!height || !weight) {
-        errorMsg += '空白です。半角数字で入力してください。';
+        errorMsg += '空白です。';
     };
 
     //数値判定
