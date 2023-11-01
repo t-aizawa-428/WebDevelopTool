@@ -43,7 +43,7 @@ function getPassword() {
     let len = 8;
 
     //文字数取得
-    let radioList = document.querySelectorAll(`input[type = 'radio']`);
+    let radioList = document.querySelectorAll("input[type = 'radio']");
     radioList.forEach(radio => {
         if(radio.checked) {
             len = radio.value;

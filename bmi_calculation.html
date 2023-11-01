@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zawao -シンプルツール-</title>
+    <meta name="description" content="シンプルなWebツールで直感操作。文字数カウントやパスワード生成など便利なツールを用意。">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/bmi_calculation.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- ヘッダー -->
+        <header class="header-area">
+            <h1 class="header-title">zawao -シンプルツール-</h1>
+        </header>
+
+        <!-- メインエリア -->
+        <div class="main-area wrapper">
+
+            <!-- サイドバー -->
+            <aside class="aside-menu">
+                <ul  class="aside-menu__category-list">
+                    <li><a href="index.html">文字数カウント</a></li>
+                    <li><a href="create-password.html">パスワード生成</a></li>
+                    <li><a href="bmi_calculation.html">BMI・適正体重計算</a></li>
+                    <!-- <li><a href="#">お問い合わせ</a></li> -->
+                </ul>
+            </aside>
+
+            <!-- BMI計算 -->
+            <article class="article-main">
+                <h2 class="article-main__name">BMI・適正体重計算</h2>
+                <div class="article-main__bmi-area">
+                    <div class="article-main__bmi-area-input">
+                        <div id="error-message"></div>
+                        <table>
+                            <tr>
+                                <td>身長</td>
+                                <td><input id="bmi-height" type="text" value="170"></td>
+                                <td>cm</td>
+                            </tr>
+                            <tr>
+                                <td>体重</td>
+                                <td><input id="bmi-weight" type="text" value="50"></td>
+                                <td>kg</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <input class="article-main__bmi-area-btn" id="cal-btn" type="button" value="計　算">
+                    <input class="article-main__bmi-area-btn" id="clear-btn" type="button" value="クリア">
+
+                    <table class="article-main__bmi-area-table" border="1">
+                        <tr>
+                            <th>BMI(範囲)</th>
+                            <th>肥満判定</th>
+                            <th>適正体重</th>
+                            <th>BMI</th>
+                        </tr>
+                        <tr>
+                            <td>18.5未満</td>
+                            <td>低体重</td>
+                            <td class="article-main__bmi-area-table-standard-weight"></td>
+                            <td class="article-main__bmi-area-table-bmi"></td>
+                        </tr>
+                        <tr>
+                            <td>18~25未満</td>
+                            <td>普通体重</td>
+                            <td class="article-main__bmi-area-table-standard-weight"></td>
+                            <td class="article-main__bmi-area-table-bmi"></td>
+                        </tr>
+                        <tr>
+                            <td>25~30未満</td>
+                            <td>肥満(1度)</td>
+                            <td class="article-main__bmi-area-table-standard-weight"></td>
+                            <td class="article-main__bmi-area-table-bmi"></td>
+                        </tr>
+                        <tr>
+                            <td>30~35未満</td>
+                            <td>肥満(2度)</td>
+                            <td class="article-main__bmi-area-table-standard-weight"></td>
+                            <td class="article-main__bmi-area-table-bmi"></td>
+                        </tr>
+                        <tr>
+                            <td>35~40未満</td>
+                            <td>肥満(3度)</td>
+                            <td class="article-main__bmi-area-table-standard-weight"></td>
+                            <td class="article-main__bmi-area-table-bmi"></td>
+                        </tr>
+                        <tr>
+                            <td>40以上</td>
+                            <td>肥満(4度)</td>
+                            <td class="article-main__bmi-area-table-standard-weight"></td>
+                            <td class="article-main__bmi-area-table-bmi"></td>
+                        </tr>
+                    </table>
+                </div>
+            </article>
+        </div>
+
+        <!-- フッター -->
+        <footer>
+            <p class="footer"><small>&copy; 2023 zawao. All Rights Reserved.</small></p>
+        </footer>
+    </div>
+</body>
+</html>

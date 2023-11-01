@@ -68,7 +68,8 @@ article {
     width: 74%;
 }
 
-/* サイドメニュー */
+/* サイドメニュー
+------------------------------------ */
 .aside-menu__category-list {
     min-height: 100vh;
     border: 4px solid #ccc;
@@ -93,7 +94,8 @@ article {
     color: #fff; 
 }
 
-/* コンテンツ */
+/* メインコンテンツ
+------------------------------------ */
 .article-main {
     min-height: 100vh;
     text-align: center;
@@ -108,7 +110,8 @@ article {
     text-align: left;
 }
 
-/* 文字数カウント */
+/* 文字数カウント
+------------------------------------ */
 .article-main__text-area {
     border: 4px solid #ccc;
     width: 80%;
@@ -132,7 +135,8 @@ article {
     padding: 15px;
 }
 
-/* パスワード生成 */
+/* パスワード生成
+------------------------------------ */
 #password-text {
     display: flex;
     flex-wrap: wrap;
@@ -148,12 +152,12 @@ article {
     padding: 1px 1px;
 }
 
-#passwaord-character-count {
+#password-character-count {
     padding-top: 2rem;
     padding-bottom: 1rem;
 }
 
-#passwaord-character-count label{
+#password-character-count label{
     margin: 10px;
 }
 
@@ -167,6 +171,59 @@ article {
     margin-bottom: 1rem;
 }
 
+/* BMI計算
+------------------------------------ */
+.article-main__bmi-area-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.75rem;
+
+}
+
+.article-main__bmi-area-input table td {
+    padding: 5px 3px 5px;
+}
+
+.article-main__bmi-area-input input{
+    border: 3px solid #ccc;
+    width: 7.5rem;
+    padding-left: 5px;
+}
+
+.article-main__bmi-area-btn {
+    border: 3px solid #ccc;
+    border-radius: 50px;
+    color: #fff;
+    background-color: #00005d;
+    padding: 15px;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.article-main__bmi-area-table {
+    border: 2px #ccc solid;
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: fixed;
+    width: 500px;
+    height: 300px;
+    margin-bottom: 1rem;
+}
+
+#error-message {
+    font-size: 1rem;
+    color: red;
+}
+
+.article-main__bmi-area-table-standard-weight {
+    color: red;
+    font-weight: bold;
+}
+.article-main__bmi-area-table-bmi {
+    color: red;
+    font-weight: bold;
+}
 
 /* モバイル版
 ------------------------------------ */
@@ -191,6 +248,15 @@ article {
     .aside-menu__category-list {
         min-height: 10vh;
         border: none;
+        gap: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 10px 10px;
+    }
+
+    .aside-menu__category-list li {
+        margin-bottom: 0;
+        font-size: 0.5rem;
     }
 
     .main-area {
@@ -217,5 +283,12 @@ article {
         margin: 0.5rem 0.5rem;
         font-size: 0.5rem;
         width: 25%;
+    }
+
+    /* BMI計算 */
+    .article-main__bmi-area-table {
+        font-size: 0.85rem;
+        width: 96%;
+        height: 100%;
     }
 }
