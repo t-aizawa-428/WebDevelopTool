@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美容・シンデレラ体重計算 -シンプルツール-</title>
+    <meta name="description" content="身長を入力し、美容体重とシンデレラ体重を計算。シンプルなWebツールで直感的操作。">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/beuaty_calculation.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- ヘッダー -->
+        <header class="header-area">
+            <h1 class="header-title">zawao -シンプルツール-</h1>
+        </header>
+
+        <!-- メインエリア -->
+        <div class="main-area wrapper">
+
+            <!-- サイドバー -->
+            <aside class="aside-menu">
+                <ul  class="aside-menu__category-list">
+                    <li><a href="index.html">文字数カウント</a></li>
+                    <li><a href="create-password.html">パスワード生成</a></li>
+                    <li><a href="bmi_calculation.html">BMI・適正体重計算</a></li>
+                    <li><a href="beauty_calculation.html">美容・シンデレラ体重計算</a></li>
+                    <!-- <li><a href="#">お問い合わせ</a></li> -->
+                </ul>
+            </aside>
+
+            <!-- BMI計算 -->
+            <article class="article-main">
+                <h2 class="article-main__name">美容・シンデレラ体重計算</h2>
+                <div class="article-main__beuty-area">
+                    <div class="article-main__beauty-area-input">
+                        <div id="error-message"></div>
+                        <p>身長 <input id="beauty-height" type="text" value=""> cm</p>
+                    </div>
+                    <input class="article-main__bmi-area-btn" id="cal-btn" type="button" value="計　算">
+                    <input class="article-main__bmi-area-btn" id="clear-btn" type="button" value="クリア">
+
+                    <table class="article-main__beauty-area-table" border="1">
+                        <tr>
+                            <th>身長</th>
+                            <th>適正体重</th>
+                            <th>美容体重</th>
+                            <th>シンデレラ体重</th>
+                        </tr>
+                        <tr>
+                            <td id="height"></td>
+                            <td id="standard-weight"></td>
+                            <td id="beauty-weight"></td>
+                            <td id="cinderella-weight"></td>
+                        </tr>
+                    </table>
+                </div>
+            </article>
+        </div>
+
+        <!-- フッター -->
+        <footer>
+            <p class="footer"><small>&copy; 2023 zawao. All Rights Reserved.</small></p>
+        </footer>
+    </div>
+</body>
+</html>

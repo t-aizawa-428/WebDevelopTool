@@ -15,6 +15,9 @@ calBtn.addEventListener('click', () => {
 
     if(!errorMsg) {
 
+        //クリア
+        clear();
+
         //BMI算出
         let bmi = weight/((height*height)/10000.0);
 
@@ -56,11 +59,18 @@ calBtn.addEventListener('click', () => {
 
 });
 
-//クリア処理
+//クリアボタン押下
 clearBtn.addEventListener('click', () => {
+    clear();
+});
+
+
+//クリア処理
+function clear() {
 
     inputHeight.value = "";
     inputWeight.value = "";
+    error.textContent = "";
     
     for(let i = 0; i < 6; i++) {
 
@@ -68,7 +78,7 @@ clearBtn.addEventListener('click', () => {
         tbl.rows[bmiRows].cells[2].textContent = "";
         tbl.rows[bmiRows].cells[3].textContent = "";
     };
-});
+};
 
 //エラーチェック
 function errorCheck(height, weight) {
