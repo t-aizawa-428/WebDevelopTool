@@ -74,6 +74,7 @@ article {
     min-height: 100vh;
     border: 4px solid #ccc;
     padding: 1rem 0.5rem;
+    height: 100%;
 }
 
 .aside-menu__category-list li {
